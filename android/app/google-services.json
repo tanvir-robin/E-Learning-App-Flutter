@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "196790250714",
+    "project_id": "elearning-raisa",
+    "storage_bucket": "elearning-raisa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196790250714:android:8f0c8bc48a892b888a89e3",
+        "android_client_info": {
+          "package_name": "com.example.online_cource_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoHuLlxgH4-z6ykQFHZfH4wVg99B1y0Ww"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

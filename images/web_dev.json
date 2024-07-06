@@ -1,0 +1,55 @@
+{
+    "questions": [
+      {
+        "question": "What does HTML stand for?",
+        "options": ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyperlinking Text Markup Language"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What is the purpose of CSS in web development?",
+        "options": ["Content Structuring", "Server-side Scripting", "Styling Web Pages", "Database Management"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Which language is used for web development along with HTML and CSS?",
+        "options": ["JavaScript", "Python", "Java", "C++"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What is the correct syntax for referring to an external script called 'script.js'?",
+        "options": ["<script src='script.js'>", "<script href='script.js'>", "<script link='script.js'>", "<script ref='script.js'>"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What does SQL stand for?",
+        "options": ["Structured Query Language", "Stylish Question Language", "Stylesheet Query Language", "Statement Query Language"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Which of the following is a JavaScript framework?",
+        "options": ["Angular", "Django", "Rails", "Laravel"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What does JSON stand for?",
+        "options": ["JavaScript Object Notation", "Java Serialized Object Notation", "JavaScript Online Notation", "JavaScript Object Native"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Which HTML tag is used to create a hyperlink?",
+        "options": ["<a>", "<link>", "<href>", "<hyperlink>"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Which HTTP method is used to retrieve data from a server?",
+        "options": ["GET", "POST", "PUT", "DELETE"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What is the use of the <head> tag in HTML?",
+        "options": ["To define the header of a document", "To include metadata and links to scripts and styles", "To contain the main content of a document", "To create a section within a document"],
+        "correctAnswer": 1
+      }
+    ]
+  }
+  

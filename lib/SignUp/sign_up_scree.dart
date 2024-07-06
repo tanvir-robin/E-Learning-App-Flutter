@@ -1,35 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:online_cource_app/Home/home_page.dart';
-import 'package:online_cource_app/SignUp/sign_up_scree.dart';
+import 'package:online_cource_app/Login/login_page.dart';
 import 'package:online_cource_app/Utils/dialouge_utils.dart';
 import 'package:online_cource_app/Utils/toast_messages.dart';
 import 'package:online_cource_app/controllers/auth_controller.dart';
 
-class LoginApp extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Animated Login Page',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: LoginPage(),
-    );
-  }
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class LoginPage extends StatefulWidget {
-  @override
-  _LoginPageState createState() => _LoginPageState();
-}
-
-class _LoginPageState extends State<LoginPage>
+class _SignUpPageState extends State<SignUpPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animation;
-  TextEditingController _usernameController = TextEditingController();
+  TextEditingController _nameController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
   AuthController auth = Get.find<AuthController>();
 
@@ -52,42 +38,24 @@ class _LoginPageState extends State<LoginPage>
   @override
   void dispose() {
     _animationController.dispose();
-    _usernameController.dispose();
+    _nameController.dispose();
+    _emailController.dispose();
     _passwordController.dispose();
     super.dispose();
   }
 
-  void _login() async {
-    String username = _usernameController.text.trim();
-    String password = _passwordController.text.trim();
-    final user = await auth.signInUsers(context, username, password);
-    if (user == null) {
+  void _onSignUp() async {
+    showLoadingDialouge(context, 'Signing up...');
+    if (_emailController.text.isNotEmpty &&
+        _passwordController.text.isNotEmpty) {
+      await auth.signUpNewUsers(
+          context, _emailController.text, _passwordController.text);
       Get.back();
-      showErrorToast(context, 'Invalid username or password');
+      showSuccessToast(context, 'Successfully signed up');
+    } else {
+      Get.back();
+      showErrorToast(context, 'Please fill all the required fields');
     }
-    // Check if the username and password match the expected values
-    // if (username == 'raisa' && password == '123') {
-    //   Navigator.pushReplacement(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => MyHomePage()),
-    //   );
-    // } else {
-    //   showDialog(
-    //     context: context,
-    //     builder: (context) => AlertDialog(
-    //       title: Text('Incorrect'),
-    //       content: Text('Username or password is incorrect.'),
-    //       actions: [
-    //         TextButton(
-    //           onPressed: () {
-    //             Navigator.pop(context);
-    //           },
-    //           child: Text('OK'),
-    //         ),
-    //       ],
-    //     ),
-    //   );
-    // }
   }
 
   @override
@@ -113,10 +81,9 @@ class _LoginPageState extends State<LoginPage>
                 child: Image.asset(
                   "images/logo.png",
                   width: MediaQuery.of(context).size.width * .5,
-                  //    height: 150,
                 ),
               ),
-              const Text('Welcome Back!',
+              const Text('New User Sign Up',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
               SizedBox(height: 20),
               SlideTransition(
@@ -133,11 +100,35 @@ class _LoginPageState extends State<LoginPage>
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: TextFormField(
-                    controller: _usernameController,
+                    controller: _nameController,
                     decoration: InputDecoration(
-                      hintText: 'Username',
+                      hintText: 'Name',
                       border: InputBorder.none,
                       prefixIcon: Icon(Icons.person),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              SlideTransition(
+                position: Tween<Offset>(
+                  begin: Offset(0.0, -1.5),
+                  end: Offset.zero,
+                ).animate(_animation),
+                child: Container(
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: TextFormField(
+                    controller: _emailController,
+                    decoration: InputDecoration(
+                      hintText: 'Email',
+                      border: InputBorder.none,
+                      prefixIcon: Icon(Icons.email),
                     ),
                   ),
                 ),
@@ -174,7 +165,7 @@ class _LoginPageState extends State<LoginPage>
                   end: Offset.zero,
                 ).animate(_animation),
                 child: MaterialButton(
-                  onPressed: _login,
+                  onPressed: _onSignUp,
                   minWidth: MediaQuery.of(context).size.width * 0.8,
                   padding: EdgeInsets.symmetric(vertical: 15),
                   color: Colors.blue,
@@ -182,7 +173,7 @@ class _LoginPageState extends State<LoginPage>
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: const Text(
-                    'Login',
+                    'Sign Up',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
@@ -190,18 +181,16 @@ class _LoginPageState extends State<LoginPage>
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 30,
-              ),
+              const SizedBox(height: 30),
               const Text(
-                'Or',
+                'Already have an account?',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               TextButton(
                   onPressed: () {
-                    Get.to(() => SignUpPage());
+                    Get.to(() => LoginPage());
                   },
-                  child: const Text('Sign Up',
+                  child: const Text('Log in',
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 18)))
             ],

@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:online_cource_app/About/about_screen.dart';
+import 'package:online_cource_app/Courses/alll_courses.dart';
+import 'package:online_cource_app/Exam/exam_home.dart';
+import 'package:online_cource_app/Exam/exam_screen.dart';
+import 'package:online_cource_app/Home/home_page.dart';
 import 'package:online_cource_app/Login/login_page.dart';
+import 'package:online_cource_app/controllers/auth_controller.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -24,28 +31,31 @@ class CustomDrawer extends StatelessWidget {
             leading: Icon(Icons.home),
             title: Text('Home'),
             onTap: () {
-              // Navigate to home screen or perform desired action
+              Get.to(() => MyHomePage());
             },
           ),
           ListTile(
             leading: Icon(Icons.menu_book),
             title: Text('All Courses'),
             onTap: () {
-              // Navigate to all courses screen or perform desired action
+              Get.to(() => CourseListPage());
             },
           ),
           ListTile(
-            leading: Icon(Icons.assignment),
-            title: Text('Enrolled'),
+            leading: Icon(Icons.check),
+            title: Text('Exam'),
             onTap: () {
-              // Navigate to enrolled courses screen or perform desired action
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ExamHome()),
+              );
             },
           ),
           ListTile(
-            leading: Icon(Icons.local_offer),
-            title: Text('Promos'),
+            leading: Icon(Icons.info),
+            title: Text('About'),
             onTap: () {
-              // Navigate to promos screen or perform desired action
+              Get.to(() => AboutPage());
             },
           ),
           ListTile(
@@ -53,10 +63,7 @@ class CustomDrawer extends StatelessWidget {
             title: Text('Sign Out'),
             onTap: () {
               // Navigate to LoginPage
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => LoginPage()),
-              );
+              AuthController().signOutUsers();
             },
           ),
         ],

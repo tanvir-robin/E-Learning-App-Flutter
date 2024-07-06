@@ -1,0 +1,30 @@
+{
+    "questions": [
+      {
+        "question": "Which programming language is primarily used for Android app development?",
+        "options": ["Java", "Swift", "Kotlin", "Objective-C"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "What is the name of the design pattern commonly used in iOS app development?",
+        "options": ["MVC", "MVP", "MVVM", "VIPER"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Which IDE is used for Android app development?",
+        "options": ["Xcode", "Android Studio", "Visual Studio", "Eclipse"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What is the file extension of an Android application package?",
+        "options": [".apk", ".ipa", ".exe", ".jar"],
+        "correctAnswer": 0
+      },
+      {
+        "question": "Which of the following is a cross-platform mobile development framework?",
+        "options": ["React Native", "Swift", "Java", "Kotlin"],
+        "correctAnswer": 0
+      }
+    ]
+  }
+  
