@@ -64,6 +64,8 @@ class _LoginPageState extends State<LoginPage>
     if (user == null) {
       Get.back();
       showErrorToast(context, 'Invalid username or password');
+    } else {
+      Get.off(() => MyHomePage());
     }
     // Check if the username and password match the expected values
     // if (username == 'raisa' && password == '123') {

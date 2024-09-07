@@ -12,6 +12,7 @@ class AuthController extends GetxController {
         email: email,
         password: password,
       );
+
       await signInUsers(context, email, password);
       return userCredential.user;
     } catch (e) {
