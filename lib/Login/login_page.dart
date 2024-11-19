@@ -207,13 +207,56 @@ class _LoginPageState extends State<LoginPage>
                   child: const Text('Sign Up',
                       style: TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 18))),
+              // TextButton(
+              //     onPressed: () {
+              //       Get.to(() => AdminCoursesScreen());
+              //     },
+              //     child: const Text('Admin Login',
+              //         style: TextStyle(
+              //             fontWeight: FontWeight.bold, fontSize: 15))),
               TextButton(
-                  onPressed: () {
-                    Get.to(() => AdminCoursesScreen());
-                  },
-                  child: const Text('Admin Login',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 15)))
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      TextEditingController _pinController =
+                          TextEditingController();
+                      return AlertDialog(
+                        title: Text('Enter PIN'),
+                        content: TextField(
+                          controller: _pinController,
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            hintText: 'PIN',
+                          ),
+                          keyboardType: TextInputType.number,
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              if (_pinController.text == '1234') {
+                                Get.to(() => AdminCoursesScreen());
+                              } else {
+                                showErrorToast(context, 'Invalid PIN');
+                              }
+                            },
+                            child: const Text('Submit'),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+                child: const Text('Admin Login',
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+              )
             ],
           ),
         ),
