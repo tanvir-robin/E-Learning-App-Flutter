@@ -4,6 +4,7 @@ import 'package:online_cource_app/Home/home_page.dart';
 import 'package:online_cource_app/SignUp/sign_up_scree.dart';
 import 'package:online_cource_app/Utils/dialouge_utils.dart';
 import 'package:online_cource_app/Utils/toast_messages.dart';
+import 'package:online_cource_app/admin/admin_all_course.dart';
 import 'package:online_cource_app/controllers/auth_controller.dart';
 
 class LoginApp extends StatelessWidget {
@@ -204,8 +205,15 @@ class _LoginPageState extends State<LoginPage>
                     Get.to(() => SignUpPage());
                   },
                   child: const Text('Sign Up',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 18))),
+              TextButton(
+                  onPressed: () {
+                    Get.to(() => AdminCoursesScreen());
+                  },
+                  child: const Text('Admin Login',
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18)))
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 15)))
             ],
           ),
         ),

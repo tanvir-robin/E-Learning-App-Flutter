@@ -55,6 +55,7 @@ dependencies:
   firebase_storage: ^12.2.0
   video_player: ^2.9.1
   chewie: ^1.8.4
+  flutter_easyloading: ^3.0.5
   
 
 dev_dependencies:
