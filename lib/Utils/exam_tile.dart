@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:online_cource_app/Exam/exam_screen.dart';
 
@@ -24,6 +25,9 @@ class ExamTile extends StatelessWidget {
             MaterialPageRoute(
                 builder: (context) => ExamScreen(
                       questionPath: questionAssetName,
+                      examName: name,
+                      userEmail: FirebaseAuth.instance.currentUser!.email!,
+                      userName: 'Test',
                     )),
           );
         },
@@ -42,6 +46,9 @@ class ExamTile extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => ExamScreen(
+                          examName: name,
+                          userEmail: FirebaseAuth.instance.currentUser!.email!,
+                          userName: 'Test',
                           questionPath: questionAssetName,
                         )),
               );
