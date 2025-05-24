@@ -12,6 +12,8 @@ import 'package:online_cource_app/Login/login_page.dart';
 import 'package:online_cource_app/controllers/auth_controller.dart';
 
 class CustomDrawer extends StatelessWidget {
+  const CustomDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -41,7 +43,7 @@ class CustomDrawer extends StatelessWidget {
             leading: const Icon(OctIcons.book),
             title: const Text('All Courses'),
             onTap: () {
-              Get.to(() => CourseListPage());
+              Get.to(() => const CourseListPage());
             },
           ),
           ListTile(
@@ -65,7 +67,7 @@ class CustomDrawer extends StatelessWidget {
             leading: const Icon(OctIcons.info),
             title: const Text('About'),
             onTap: () {
-              Get.to(() => AboutPage());
+              Get.to(() => const AboutPage());
             },
           ),
           ListTile(
@@ -74,7 +76,7 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               // Navigate to LoginPage
               AuthController().signOutUsers();
-              Get.off(() => LoginPage());
+              Get.off(() => const LoginPage());
             },
           ),
         ],

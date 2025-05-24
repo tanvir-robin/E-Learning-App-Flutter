@@ -1,6 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:online_cource_app/Utils/enroll_dioulouge.dart';
@@ -10,7 +8,7 @@ import 'package:online_cource_app/Model/course_model.dart';
 class CourseDetailsPage extends StatelessWidget {
   final CourseModel course;
 
-  CourseDetailsPage({required this.course});
+  CourseDetailsPage({super.key, required this.course});
 
   final List<TimelineItem> timelineItems = [
     TimelineItem(
@@ -133,8 +131,8 @@ class CourseDetailsPage extends StatelessWidget {
           CachedNetworkImage(
             imageUrl: course.cover,
             placeholder: (context, url) =>
-                Center(child: CircularProgressIndicator()),
-            errorWidget: (context, url, error) => Icon(Icons.error),
+                const Center(child: CircularProgressIndicator()),
+            errorWidget: (context, url, error) => const Icon(Icons.error),
             imageBuilder: (context, imageProvider) => Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -169,7 +167,7 @@ class CourseDetailsPage extends StatelessWidget {
             style: GoogleFonts.poppins(
                 fontSize: 28, fontWeight: FontWeight.bold, color: Colors.teal),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             'Duration: ${course.duration}',
             style: GoogleFonts.poppins(fontSize: 16, color: Colors.grey[700]),
@@ -190,7 +188,7 @@ class CourseDetailsPage extends StatelessWidget {
             style: GoogleFonts.poppins(
                 fontSize: 22, fontWeight: FontWeight.w600, color: Colors.black),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Column(
             children: course.instructors.map((instructor) {
               return Padding(
@@ -219,7 +217,7 @@ class CourseDetailsPage extends StatelessWidget {
             style: GoogleFonts.poppins(
                 fontSize: 22, fontWeight: FontWeight.w600, color: Colors.black),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             course.description,
             style: GoogleFonts.poppins(fontSize: 16, color: Colors.grey[700]),
@@ -240,7 +238,7 @@ class CourseDetailsPage extends StatelessWidget {
             style: GoogleFonts.poppins(
                 fontSize: 22, fontWeight: FontWeight.w600, color: Colors.black),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           _buildTimelineTiles(),
         ],
       ),
@@ -265,8 +263,8 @@ class CourseDetailsPage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          beforeLineStyle: LineStyle(color: Colors.teal, thickness: 4),
-          afterLineStyle: LineStyle(color: Colors.teal, thickness: 4),
+          beforeLineStyle: const LineStyle(color: Colors.teal, thickness: 4),
+          afterLineStyle: const LineStyle(color: Colors.teal, thickness: 4),
           endChild: _buildTimelineContent(item),
         );
       }),
@@ -291,7 +289,7 @@ class CourseDetailsPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.teal),
               ),
-              SizedBox(height: 6),
+              const SizedBox(height: 6),
               Text(
                 item.title,
                 style: GoogleFonts.poppins(
@@ -299,7 +297,7 @@ class CourseDetailsPage extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                     color: Colors.black),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Text(
                 item.description,
                 style:

@@ -1,20 +1,51 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:get/route_manager.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
-import 'package:online_cource_app/Login/login_page.dart';
 import 'package:online_cource_app/auth_gate.dart';
 import 'package:online_cource_app/controllers/auth_controller.dart';
 import 'package:online_cource_app/firebase_options.dart';
+import 'package:online_cource_app/theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Set preferred orientations
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+
+  // Initialize Firebase
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  Get.lazyPut(() => AuthController());
+
+  // Register controllers
+  Get.lazyPut(() => AuthController(), fenix: true);
+
+  // Configure EasyLoading
+  configureEasyLoading();
+
   runApp(const MyApp());
+}
+
+void configureEasyLoading() {
+  EasyLoading.instance
+    ..displayDuration = const Duration(milliseconds: 2000)
+    ..indicatorType = EasyLoadingIndicatorType.fadingCircle
+    ..loadingStyle = EasyLoadingStyle.custom
+    ..indicatorSize = 45.0
+    ..radius = 16.0
+    ..progressColor = AppTheme.primaryColor
+    ..backgroundColor = Colors.white
+    ..indicatorColor = AppTheme.primaryColor
+    ..textColor = AppTheme.textColor
+    ..maskColor = Colors.black.withOpacity(0.5)
+    ..userInteractions = false
+    ..dismissOnTap = false;
 }
 
 class MyApp extends StatelessWidget {
@@ -23,9 +54,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      // theme: ThemeData(useMaterial3: false),
+      title: 'E-Learning App',
       debugShowCheckedModeBanner: false,
-      home: AuthGate(),
+      theme: AppTheme.lightTheme(),
+      home: const AuthGate(),
+      builder: EasyLoading.init(),
+      defaultTransition: Transition.fadeIn,
+      transitionDuration: const Duration(milliseconds: 200),
     );
   }
 }

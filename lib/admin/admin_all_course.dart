@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:online_cource_app/admin/add_new_course.dart';
 
 class AdminCoursesScreen extends StatelessWidget {
+  const AdminCoursesScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +14,7 @@ class AdminCoursesScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.add),
             onPressed: () {
-              Get.to(() => AddCourseScreen());
+              Get.to(() => const AddCourseScreen());
             },
           ),
         ],

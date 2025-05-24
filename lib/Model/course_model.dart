@@ -1,4 +1,5 @@
 class CourseModel {
+  final String? id;
   final String cover;
   final String duration;
   final List<String> instructors;
@@ -7,6 +8,7 @@ class CourseModel {
   final double price;
 
   CourseModel({
+    this.id,
     required this.cover,
     required this.duration,
     required this.instructors,
@@ -18,6 +20,7 @@ class CourseModel {
   // fromJSON constructor with default values
   factory CourseModel.fromJson(Map<String, dynamic> json) {
     return CourseModel(
+      id: json['id'] as String?,
       cover: json['cover'] as String,
       duration: json['duration'] as String,
       instructors: List<String>.from(json['instructor'] ?? []),
@@ -33,6 +36,7 @@ class CourseModel {
   // toJSON method for converting the object back to JSON format
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'cover': cover,
       'duration': duration,
       'instructor': instructors,

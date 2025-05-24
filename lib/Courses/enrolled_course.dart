@@ -8,7 +8,7 @@ import 'package:online_cource_app/Model/course_model.dart'; // Import Firestore 
 class EnrolledCourseItem extends StatelessWidget {
   final CourseModel course;
 
-  const EnrolledCourseItem({Key? key, required this.course}) : super(key: key);
+  const EnrolledCourseItem({super.key, required this.course});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,9 @@ class EnrolledCourseItem extends StatelessWidget {
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         elevation: 5,
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -36,14 +36,14 @@ class EnrolledCourseItem extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Text(
                 course.title,
                 style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               Text(
                 'Instructors: ${course.instructors.join(', ')}',
                 style: Theme.of(context).textTheme.bodySmall,
@@ -58,30 +58,30 @@ class EnrolledCourseItem extends StatelessWidget {
 
 class EnrolledCoursesScreen extends StatelessWidget {
   const EnrolledCoursesScreen({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Enrolled Courses'),
+        title: const Text('Enrolled Courses'),
       ),
       body: StreamBuilder<List<CourseModel>>(
         stream: getCoursesStream(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-            return Center(child: Text('No enrolled courses found.'));
+            return const Center(child: Text('No enrolled courses found.'));
           }
 
           final courses = snapshot.data!;
 
           return GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
@@ -107,6 +107,6 @@ Stream<List<CourseModel>> getCoursesStream() {
       .snapshots()
       .map((snapshot) => snapshot.docs
           .map(
-              (doc) => CourseModel.fromJson(doc.data() as Map<String, dynamic>))
+              (doc) => CourseModel.fromJson(doc.data()))
           .toList());
 }

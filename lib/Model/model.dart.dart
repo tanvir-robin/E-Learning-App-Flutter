@@ -4,24 +4,24 @@ const List onlineCourceOne = [
     "price": "\$50",
     "title": "Marketing",
     "courses": "17 Courses",
-    "img": "images/marketing.png",
-    "img_detail": "images/marketing_detail.png"
+    "img": "assets/markeeting.png",
+    "img_detail": "assets/markeeting.png"
   },
   {
     "id": "2",
     "price": "\$90",
     "title": "Photography",
     "courses": "13 Courses",
-    "img": "images/photography.png",
-    "img_detail": "images/photography_detail.png"
+    "img": "assets/photography.jpg",
+    "img_detail": "assets/photography.jpg"
   },
   {
     "id": "3",
     "price": "\$90",
     "title": "Music",
     "courses": "19 Courses",
-    "img": "images/marketing.png",
-    "img_detail": "images/marketing_detail.png"
+    "img": "assets/music.jpg",
+    "img_detail": "assets/music.jpg"
   },
 ];
 

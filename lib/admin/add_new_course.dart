@@ -1,9 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 class AddCourseScreen extends StatefulWidget {
+  const AddCourseScreen({super.key});
+
   @override
   _AddCourseScreenState createState() => _AddCourseScreenState();
 }
@@ -188,10 +189,10 @@ class _AddCourseScreenState extends State<AddCourseScreen> {
                 // Add Course Button
                 ElevatedButton(
                   onPressed: _addCourse,
-                  child: const Text('Add Course'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
                   ),
+                  child: const Text('Add Course'),
                 ),
               ],
             ),

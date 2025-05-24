@@ -5,6 +5,8 @@ import 'package:online_cource_app/Courses/course_details.dart';
 import 'package:online_cource_app/Model/course_model.dart';
 
 class CourseListPage extends StatelessWidget {
+  const CourseListPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +41,7 @@ class CourseListPage extends StatelessWidget {
 
 class CourseCard extends StatelessWidget {
   final CourseModel course;
-  CourseCard({
+  const CourseCard({super.key, 
     required this.course,
   });
 
