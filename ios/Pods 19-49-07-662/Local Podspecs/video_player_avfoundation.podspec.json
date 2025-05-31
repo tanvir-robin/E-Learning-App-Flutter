@@ -1,0 +1,48 @@
+{
+  "name": "video_player_avfoundation",
+  "version": "0.0.1",
+  "summary": "Flutter Video Player",
+  "description": "A Flutter plugin for playing back video on a Widget surface.\nDownloaded by pub (not CocoaPods).",
+  "homepage": "https://github.com/flutter/packages",
+  "license": {
+    "type": "BSD",
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "Flutter Dev Team": "flutter-dev@googlegroups.com"
+  },
+  "source": {
+    "http": "https://github.com/flutter/packages/tree/main/packages/video_player/video_player_avfoundation"
+  },
+  "documentation_url": "https://pub.dev/packages/video_player",
+  "source_files": "video_player_avfoundation/Sources/video_player_avfoundation/**/*.{h,m}",
+  "ios": {
+    "source_files": "video_player_avfoundation/Sources/video_player_avfoundation_ios/*",
+    "dependencies": {
+      "Flutter": [
+
+      ]
+    }
+  },
+  "osx": {
+    "source_files": "video_player_avfoundation/Sources/video_player_avfoundation_macos/*",
+    "dependencies": {
+      "FlutterMacOS": [
+
+      ]
+    }
+  },
+  "public_header_files": "video_player_avfoundation/Sources/video_player_avfoundation/include/**/*.h",
+  "platforms": {
+    "ios": "12.0",
+    "osx": "10.14"
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES"
+  },
+  "resource_bundles": {
+    "video_player_avfoundation_privacy": [
+      "video_player_avfoundation/Sources/video_player_avfoundation/Resources/PrivacyInfo.xcprivacy"
+    ]
+  }
+}

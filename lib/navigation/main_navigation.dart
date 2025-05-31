@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:online_cource_app/About/about_screen.dart';
+
 import 'package:online_cource_app/About/profile_screen.dart';
 import 'package:online_cource_app/Courses/alll_courses.dart';
 import 'package:online_cource_app/Courses/enrolled_course.dart';
