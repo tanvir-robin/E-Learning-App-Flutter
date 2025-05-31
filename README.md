@@ -3,16 +3,24 @@
 **Unlock Your Potential: A Feature-Rich E-Learning Experience for Mobile and Web**
 
 This comprehensive e-learning platform, built with **Flutter** for a seamless mobile experience and a powerful **React-based web admin panel**, is designed to revolutionize how students learn and educators manage content. Dive into an intuitive and engaging learning environment, backed by robust administrative tools.
-![Simulator Screenshot - iPhone 16 Plus - 2025-05-31 at 20 41 16](https://github.com/user-attachments/assets/444f2796-aee1-4f33-959d-3b51ca77d8dc)
-![Simulator Screenshot - iPhone 16 Plus - 2025-05-31 at 20 40 29](https://github.com/user-attachments/assets/90189c24-995b-4928-983f-82adc5d4358a)
-![Simulator Screenshot - iPhone 16 Plus - 2025-05-31 at 20 40 36](https://github.com/user-attachments/assets/4f31a72f-f704-4251-8813-0b71ce18a8aa)
-![Simulator Screenshot - iPhone 16 Plus - 2025-05-31 at 20 40 50](https://github.com/user-attachments/assets/df15ccb9-a5e7-4c87-9120-de393187d301)
-![Simulator Screenshot - iPhone 16 Plus - 2025-05-31 at 20 41 00](https://github.com/user-attachments/assets/297ae33a-0a93-4df5-baf9-e79cb3efb2f8)
-![Simulator Screenshot - iPhone 16 Plus - 2025-05-31 at 20 41 05](https://github.com/user-attachments/assets/4b72f089-ce01-4a51-9678-54aefb060a5f)
 
+## 📱 Mobile App Screenshots
 
-![CleanShot 2025-05-31 at 20 24 07@2x](https://github.com/user-attachments/assets/34f4154e-975b-492a-9817-4971b6fe991f)
-![CleanShot 2025-05-31 at 20 23 55@2x](https://github.com/user-attachments/assets/dc3d93a5-72ea-43ed-bba5-99df5b5d32a7)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/444f2796-aee1-4f33-959d-3b51ca77d8dc" alt="iPhone Screenshot 1" width="200"/>
+  <img src="https://github.com/user-attachments/assets/90189c24-995b-4928-983f-82adc5d4358a" alt="iPhone Screenshot 2" width="200"/>
+  <img src="https://github.com/user-attachments/assets/4f31a72f-f704-4251-8813-0b71ce18a8aa" alt="iPhone Screenshot 3" width="200"/>
+  <img src="https://github.com/user-attachments/assets/df15ccb9-a5e7-4c87-9120-de393187d301" alt="iPhone Screenshot 4" width="200"/>
+  <img src="https://github.com/user-attachments/assets/297ae33a-0a93-4df5-baf9-e79cb3efb2f8" alt="iPhone Screenshot 5" width="200"/>
+  <img src="https://github.com/user-attachments/assets/4b72f089-ce01-4a51-9678-54aefb060a5f" alt="iPhone Screenshot 6" width="200"/>
+</p>
+
+## 🖥️ Web Admin Panel Screens
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/34f4154e-975b-492a-9817-4971b6fe991f" alt="Web Screenshot 1" width="400"/>
+  <img src="https://github.com/user-attachments/assets/dc3d93a5-72ea-43ed-bba5-99df5b5d32a7" alt="Web Screenshot 2" width="400"/>
+</p>
 
 
 ---
