@@ -1,0 +1,8 @@
+{
+  "name": "قرايتي DZ | Qrayati DZ",
+  "description": "منصة جزائرية رقمية متكاملة لبيع واستكشاف الدورات التعليمية للمنهاج الجزائري - الابتدائي، المتوسط، البكالوريا والجامعي.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

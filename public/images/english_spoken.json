@@ -1,0 +1,80 @@
+{
+    "questions": [
+      {
+        "question": "What is the past tense of the verb 'go'?",
+        "options": ["goes", "went", "gone", "going"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which of the following is a synonym for 'happy'?",
+        "options": ["sad", "joyful", "angry", "tired"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What is the plural form of 'child'?",
+        "options": ["childs", "children", "childes", "child"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Choose the correct word to complete the sentence: 'She _____ to the market.'",
+        "options": ["go", "goes", "gone", "going"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which of the following is an adjective?",
+        "options": ["run", "beautiful", "quickly", "swim"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What is the opposite of 'easy'?",
+        "options": ["simple", "difficult", "light", "soft"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Complete the sentence: 'I have _____ apples.'",
+        "options": ["much", "many", "lot", "little"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": ["She don't like apples.", "She doesn't like apples.", "She not like apples.", "She no like apples."],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What is the correct form of the verb in the sentence: 'He _____ every day.'",
+        "options": ["exercise", "exercises", "exercised", "exercising"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Choose the correct word to complete the sentence: 'They _____ going to the park.'",
+        "options": ["is", "am", "are", "was"],
+        "correctAnswer": 2
+      },
+      {
+        "question": "Which of the following is a question tag?",
+        "options": ["isn't it?", "do it?", "wasn't he?", "don't they?"],
+        "correctAnswer": 3
+      },
+      {
+        "question": "What is the superlative form of 'good'?",
+        "options": ["gooder", "best", "better", "goodest"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Choose the correct sentence:",
+        "options": ["He is taller than she.", "He is taller than her.", "He is taller than she is.", "He is taller than she are."],
+        "correctAnswer": 1
+      },
+      {
+        "question": "Complete the sentence: 'She has lived here _____ five years.'",
+        "options": ["since", "for", "in", "at"],
+        "correctAnswer": 1
+      },
+      {
+        "question": "What is the correct word to fill in the blank: 'I need to buy _____ new shoes.'",
+        "options": ["a", "an", "the", "none"],
+        "correctAnswer": 0
+      }
+    ]
+  }
+  
